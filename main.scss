@@ -1,0 +1,305 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Droid sans";
+    background-color: #E6E9F1;
+    color: #2D2F3A;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+ 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.main-wrapper{
+    display: flex;
+    width: 90vw;
+    height: 900px;
+    border-radius: 20px;
+    margin: 20px auto;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .sidebar{
+        position: relative;
+        flex: 0.7;
+        //background-color: red;
+        border-right: 2px solid #E8EBF4;
+
+        &:first-child{
+            padding-top: 15px;
+        }
+       
+        .side-icon{
+            display: block;
+            font-size: 40px;
+            padding: 5px 0;
+            margin: 0px auto;
+            transition: all 0.4s ease-out;
+            &:hover{
+                color: rgb(0, 182, 0);
+                &::after{
+                    content: '';
+                }
+            }
+        }
+
+        
+    }
+    .main-content{
+        flex: 13;
+        //background-color: blue;
+        .top-bar{
+            height: 60px;
+            //background-color: yellow;
+            .search{
+                float: left;
+                //background-color: aqua;
+                width: 75%;
+                height: 100%;
+                .search-icon{
+                    font-size: 40px;
+                    opacity: 0.7;
+                    display: block;
+                    float:left;
+                    margin: 10px;
+                    &::after{
+                        content: '';
+                        display: table;
+                        clear: both;
+                    }
+                    
+                }
+                input{
+                    width: 30%;
+                    height: 70%;
+                    margin-top: 10px;
+                    border: none;
+                }
+            }
+            .profile-top-bar{
+                float:right;
+                //background-color: pink;
+                
+                height: 100%;
+                .profile-wrapper{
+                    display: flex;
+                    text-align: right;
+                    height: 91%;
+                    //padding: 10px;
+                    .profile-img{
+                        flex: 0.5;
+                        img{
+                            margin: 10px;
+                            max-width: 40px; 
+                            float: left;
+                            border-radius: 50%;
+                        }
+                        
+                    }
+                    h2{
+                        flex: 1;
+                        margin: 17px auto;
+                        font-size: 130%;
+                        text-align: center;
+                        padding-right: 20px;
+                        
+                    }
+                    .settings{
+                        flex: 1;
+                        font-size: 25px;
+                        margin: 18px 25px 15px 15px;
+                        opacity: 0.5;
+
+                        
+                        
+                    }
+                    .gear-icon-wrap{
+                        border-left: 2px solid #E8EBF4;
+                        width: 60px;
+                        height: 110%;
+                    }
+                    
+                }
+            }
+            &::after{
+                content: '';
+                display: table;
+                clear: both;
+            }
+        }
+    
+    }
+
+
+}
+
+
+.small-heading{
+   #analitics-details{
+    padding: 30px 0px 10px 40px;
+    float: left;
+    } 
+    #selector-details{
+    font-size: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 20px 0 20px;
+    float: right;
+    background-color: white;
+    } 
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.tooltip{
+     position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.content{
+    background-color: #E6E9F1;
+   
+    
+    border-radius: 0 0 20px 0;
+
+    .row{
+        text-align: center;
+         .home-icon-primary{
+            font-size: 50px;
+            padding:40px 40px 20px 40px;
+            color: #0184FE;
+        }
+        .home-icon-secondary{
+            font-size: 50px;
+            padding:40px 40px 20px 40px;
+            color: #0184FE;
+        }
+        .alert{
+            color: red;
+        }
+    }
+
+}
+
+.basic-info{
+    height: 200px;
+    border-radius: 10px;
+    h3{
+        padding: 10px;
+    }
+    
+}
+
+.basic-secondary{
+    height: 400px;
+}
+.percetage-growth{
+    color: green;
+    font-size: 150%;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+.row {
+  max-width: 114rem;
+    padding: 20px;
+  
+  margin: 0 auto; 
+  
+}
+  .row:not(:last-child) {
+    margin-bottom: 1rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: #fff;
+    box-shadow: 0px 5px 20px -4px rgba(0,0,0,0.2);
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 4rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 4rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 *46rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 4rem) / 3) + 4rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 4rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2*((100% - 3 * 4rem) / 4) + 4rem); }
+  .row .col-3-of-4 {
+    width: calc(3*((100% - 3 * 4rem) / 4) + 2 * 4rem); }
+
+    .brick-chart .chart {
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+}
+.brick-chart canvas {
+  width: 250px !important;
+  height: 250px !important;
+}
+.brick-chart .legend {
+  width: 250px !important;
+  margin: 0 auto;
+  padding: 10px 0;
+  min-height: 80px;
+}
+.brick-chart .legend .entry {
+  margin: 5px;
+  line-height: 12px;
+  font-size: 12px;
+}
+.brick-chart .legend .entry .swatch {
+  display: block;
+  float: left;
+  width: 12px;
+  height: 12px;
+  content: "";
+  margin: 0px 10px 0 0;
+}
+/* Start charts */
+.charts {
+  margin-top: 25px;
+  color: #BBB
+}
+.charts .chart-container {
+  background-color: #313348;
+  padding: 15px;
+}
+.charts .chart-container h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+
